@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import AsyncAwait from './components/Async_Await';
+import Axios from './components/Axios';
+import UseFetch from './components/CostomHook';
+import Fetch from './components/Fetch';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Fetch />
+      <Axios />
+      <AsyncAwait />
     </div>
   );
 }
 
 export default App;
+
+// import UseFetch from "./components/CostomHook";
+
+// function App() {
+//   const { data: dataInfo, loading, error, refetch } = UseFetch(
+//     'https://jsonplaceholder.typicode.com/todos'
+//   );
+//   return (
+//     <div className="App">
+//       {console.log(data)}
+//     </div>
+//   );
+// }
+
+// export default App;
